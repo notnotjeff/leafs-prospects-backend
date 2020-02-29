@@ -6,6 +6,15 @@
   },
   "description": "Toronto Maple Leafs Prospect aggregator",
   "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "lint": "eslint --ignore-path ../.gitignore .",
+    "prettier": "prettier --ignore-path ../.gitignore \"**/*.+(js|json)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different",
+    "validate": "npm run check-format && npm run lint && npm run test"
+  },
   "dependencies": {
     "acorn": "^6.2.1",
     "cheerio": "^1.0.0-rc.3",
@@ -40,16 +49,6 @@
     "event-stream": "^3.3.5",
     "jest": "^24.9.0",
     "prettier": "^1.18.2"
-  },
-  "scripts": {
-    "test": "jest",
-    "start": "node server.js",
-    "lint": "eslint --ignore-path ../.gitignore .",
-    "prettier": "prettier --ignore-path ../.gitignore \"**/*.+(js|json)\"",
-    "format": "npm run prettier -- --write",
-    "check-format": "npm run prettier -- --list-different",
-    "validate": "npm run check-format && npm run lint && npm run test",
-    "heroku-postbuild": "cd ../client && npm install --only=dev && npm install && npm run build"
   },
   "author": "Jeff Craig",
   "license": "ISC"
