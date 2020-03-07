@@ -3,7 +3,6 @@ const dotenv = require("dotenv");
 const admin = require("firebase-admin");
 
 dotenv.config();
-console.log(process.env.TWITTER_CONSUMER_KEY)
 
 var T = new Twit({
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
