@@ -1,6 +1,5 @@
 var Twit = require("twit");
 var dotenv = require("dotenv");
-var htmlToImage = require("html-to-image");
 var admin = require("firebase-admin");
 
 dotenv.config();
@@ -21,64 +20,39 @@ admin.initializeApp({
   databaseURL: "https://leafs-prospects.firebaseio.com"
 });
 
-let prospectRows = [];
-const todaysRef = admin.database().ref("todaysGames");
+async function sendTweet() {
+  const prospects = [];
+  await admin.database().ref("yesterdaysGames").once('value').then(t => {
+    const ids = Object.keys(t.val())
+    ids.forEach((id) => {
+      prospects.push(t.val()[id])
+    })
+  });
 
-todaysRef.on(
-  "value",
-  function(snapshot) {
-    const prospects = snapshot.val();
-    const keys = Object.keys(prospects);
+  let yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  
+  const messageBegginning = `Prospect statlines from ${yesterday.getFullYear()}-${yesterday.getMonth()}-${yesterday.getDate()} (S-G-A-P): \n`;
+  const messages = [messageBegginning];
+  let messageIndex = 0
 
-    for (const key of keys) {
-      prospectRows.push(`
-      <tr>
-        <td className="last_name">${prospects[key].fullName}</td>
-        <td>${prospects[key].league}</td>
-        <td>${prospects[key].shots}</td>
-        <td>${prospects[key].goals}</td>
-        <td>${prospects[key].assists}</td>
-        <td>${prospects[key].points}</td>
-        <td>${prospects[key].penaltyMinutes}</td>
-      </tr>
-    `);
+  prospects.forEach(({ fullName, shots, goals, assists, points }) => {
+    const statline = `${fullName} ${shots}-${goals}-${assists}-${points} \n`;
+    if (messages[messageIndex].length + statline.length < 270) {
+      messages[messageIndex] = messages[messageIndex].concat(statline);
+    } else {
+      messageIndex++
+      messages.push(messageBegginning)
     }
+  });
 
-    let prospectTable = `
-    <table>
-      <thead>
-        <tr>
-          <th className="last_name">Name</th>
-          <th>League</th>
-          <th>S</th>
-          <th>G</th>
-          <th>A</th>
-          <th>P</th>
-          <th>PIM</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${prospectRows.join()}
-      </tbody>
-    </table>
-  `;
+  messages.forEach((message) => {
+    T.post('statuses/update', { status: message }, function(_err, data, _response) {
+      console.log(data)
+    })
+  })
 
-    console.log(prospectTable);
+  admin.app().delete();
+}
 
-    htmlToImage.toPng(prospectTable).then(function(_dataUrl) {
-      // download(dataUrl, 'my-node.png');
-    });
-
-    admin.app().delete();
-  },
-  function(errorObject) {
-    console.log("The read failed: " + errorObject.code);
-  }
-);
-
-console.log(prospectRows);
-console.log(T);
-
-// T.post('statuses/update', { status: 'hello world!' }, function(err, data, response) {
-//   console.log(data)
-// })
+sendTweet()
