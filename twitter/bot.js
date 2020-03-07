@@ -1,8 +1,9 @@
-var Twit = require("twit");
-var dotenv = require("dotenv");
-var admin = require("firebase-admin");
+const Twit = require("twit");
+const dotenv = require("dotenv");
+const admin = require("firebase-admin");
 
 dotenv.config();
+console.log(process.env.TWITTER_CONSUMER_KEY)
 
 var T = new Twit({
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
