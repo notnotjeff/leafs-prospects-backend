@@ -9,31 +9,31 @@ const qmjhl_season_id = 193;
 //   position: 'D',
 //   shoots: 'R',
 //   dob: '1999-04-20',
-//   round: 1,
-//   pick: 17,
+//   draft_round: 1,
+//   draft_pick: 17,
 //   draft_year: 2017,
-//   player_id: 6893,
-//   profile_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6893&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
-//   games_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6893&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
+//   league_id: 6893,
+//   statline_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6893&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
+//   game_statline_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6893&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
 //   league: 'AHL',
 //   ep_url: 'http://www.eliteprospects.com/player.php?player=224910'
 // }
 
-module.exports.prospects = [
+module.exports = [
   {
     first_name: "Eemeli",
     last_name: "Rasanen",
     position: "D",
     shoots: "R",
     dob: "1999-03-06",
-    round: 2,
-    pick: 59,
+    draft_round: 2,
+    draft_pick: 59,
     draft_year: 2017,
-    player_id: 31190,
-    profile_url: "https://en.khl.ru/players/31190/",
-    games_url: "https://en.khl.ru/players/31190/",
+    league_id: 31190,
+    statline_url: "https://en.khl.ru/players/31190/",
+    game_statline_url: "https://en.khl.ru/players/31190/",
     league: "KHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=302228"
+    ep_url: "http://www.eliteprospects.com/player.php?player=302228",
   },
   {
     first_name: "Timothy",
@@ -41,16 +41,16 @@ module.exports.prospects = [
     position: "D",
     shoots: "R",
     dob: "1999-04-20",
-    round: 1,
-    pick: 17,
+    draft_round: 1,
+    draft_pick: 17,
     draft_year: 2017,
-    player_id: 6893,
-    profile_url:
+    league_id: 6893,
+    statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6893&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    games_url:
+    game_statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6893&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
     league: "AHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=224910"
+    ep_url: "http://www.eliteprospects.com/player.php?player=224910",
   },
   {
     first_name: "Jeremy",
@@ -58,16 +58,16 @@ module.exports.prospects = [
     position: "RW",
     shoots: "R",
     dob: "1997-03-17",
-    round: 2,
-    pick: 61,
+    draft_round: 2,
+    draft_pick: 61,
     draft_year: 2015,
-    player_id: 6891,
-    profile_url:
+    league_id: 6891,
+    statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6891&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    games_url:
+    game_statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6891&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
     league: "AHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=197800"
+    ep_url: "http://www.eliteprospects.com/player.php?player=197800",
   },
   {
     first_name: "Adam",
@@ -75,16 +75,16 @@ module.exports.prospects = [
     position: "C",
     shoots: "L",
     dob: "1996-05-06",
-    round: 4,
-    pick: 92,
+    draft_round: 4,
+    draft_pick: 92,
     draft_year: 2016,
-    player_id: 6888,
-    profile_url:
+    league_id: 6888,
+    statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6888&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    games_url:
+    game_statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6888&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
     league: "AHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=120202"
+    ep_url: "http://www.eliteprospects.com/player.php?player=120202",
   },
   {
     first_name: "Yegor",
@@ -92,16 +92,16 @@ module.exports.prospects = [
     position: "RW",
     shoots: "L",
     dob: "1996-07-10",
-    round: 2,
-    pick: 31,
+    draft_round: 2,
+    draft_pick: 31,
     draft_year: 2016,
-    player_id: 7668,
-    profile_url:
+    league_id: 7668,
+    statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7668&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    games_url:
+    game_statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7668&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
     league: "AHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=176637"
+    ep_url: "http://www.eliteprospects.com/player.php?player=176637",
   },
   {
     first_name: "Vladislav",
@@ -109,16 +109,16 @@ module.exports.prospects = [
     position: "C",
     shoots: "L",
     dob: "1998-04-20",
-    round: 4,
-    pick: 124,
+    draft_round: 4,
+    draft_pick: 124,
     draft_year: 2017,
-    player_id: 22888,
-    profile_url: "http://www.vhlru.ru/en/players/22888/",
-    games_url: "http://www.vhlru.ru/en/players/22888/games",
-    // profile_url: 'https://en.khl.ru/players/22888/', // KHL
-    // games_url: 'https://en.khl.ru/players/22888/', // KHL
+    league_id: 22888,
+    statline_url: "http://www.vhlru.ru/en/players/22888/",
+    game_statline_url: "http://www.vhlru.ru/en/players/22888/games",
+    // statline_url: 'https://en.khl.ru/players/22888/', // KHL
+    // game_statline_url: 'https://en.khl.ru/players/22888/', // KHL
     league: "VHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=322627"
+    ep_url: "http://www.eliteprospects.com/player.php?player=322627",
   },
   {
     first_name: "Nikolai",
@@ -126,14 +126,14 @@ module.exports.prospects = [
     position: "W",
     shoots: "L",
     dob: "1997-08-01",
-    round: 7,
-    pick: 182,
+    draft_round: 7,
+    draft_pick: 182,
     draft_year: 2016,
-    player_id: 22161,
-    profile_url: "http://www.vhlru.ru/en/players/22161/",
-    games_url: "http://www.vhlru.ru/en/players/22161/games/",
+    league_id: 22161,
+    statline_url: "http://www.vhlru.ru/en/players/22161/",
+    game_statline_url: "http://www.vhlru.ru/en/players/22161/games/",
     league: "VHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=300931"
+    ep_url: "http://www.eliteprospects.com/player.php?player=300931",
   },
   {
     first_name: "Vladimir",
@@ -141,16 +141,16 @@ module.exports.prospects = [
     position: "W",
     shoots: "L",
     dob: "1997-04-18",
-    round: 5,
-    pick: 122,
+    draft_round: 5,
+    draft_pick: 122,
     draft_year: 2016,
-    player_id: 21313,
-    profile_url: "http://www.vhlru.ru/en/players/21313/",
-    games_url: "http://www.vhlru.ru/en/players/21313/games/",
-    // profile_url: 'https://en.khl.ru/players/21313/', KHL
-    // games_url: 'https://en.khl.ru/players/21313/', KHL
+    league_id: 21313,
+    statline_url: "http://www.vhlru.ru/en/players/21313/",
+    game_statline_url: "http://www.vhlru.ru/en/players/21313/games/",
+    // statline_url: 'https://en.khl.ru/players/21313/', KHL
+    // game_statline_url: 'https://en.khl.ru/players/21313/', KHL
     league: "VHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=268059"
+    ep_url: "http://www.eliteprospects.com/player.php?player=268059",
   },
   {
     first_name: "Ryan",
@@ -158,14 +158,14 @@ module.exports.prospects = [
     position: "D",
     shoots: "L",
     dob: "1999-04-25",
-    round: 7,
-    pick: 203,
+    draft_round: 7,
+    draft_pick: 203,
     draft_year: 2017,
-    player_id: 36023,
-    profile_url: "http://collegehockeyinc.com/stats/players20.php?osum16",
-    games_url: "http://collegehockeyinc.com/stats/players20.php?osum16",
+    league_id: 36023,
+    statline_url: "http://collegehockeyinc.com/stats/players20.php?osum16",
+    game_statline_url: "http://collegehockeyinc.com/stats/players20.php?osum16",
     league: "NCAA",
-    ep_url: "https://www.eliteprospects.com/player/286946/ryan-o-connell"
+    ep_url: "https://www.eliteprospects.com/player/286946/ryan-o-connell",
   },
   {
     first_name: "James",
@@ -173,14 +173,14 @@ module.exports.prospects = [
     position: "D",
     shoots: "L",
     dob: "1998-04-27",
-    round: 3,
-    pick: 72,
+    draft_round: 3,
+    draft_pick: 72,
     draft_year: 2016,
-    player_id: 31877,
-    profile_url: "http://collegehockeyinc.com/stats/players20.php?mnem23",
-    games_url: "http://collegehockeyinc.com/stats/players20.php?mnem23",
+    league_id: 31877,
+    statline_url: "http://collegehockeyinc.com/stats/players20.php?mnem23",
+    game_statline_url: "http://collegehockeyinc.com/stats/players20.php?mnem23",
     league: "NCAA",
-    ep_url: "http://www.eliteprospects.com/player.php?player=226438"
+    ep_url: "http://www.eliteprospects.com/player.php?player=226438",
   },
   {
     first_name: "Jesper",
@@ -188,18 +188,18 @@ module.exports.prospects = [
     position: "D",
     shoots: "R",
     dob: "1997-05-19",
-    round: 4,
-    pick: 95,
+    draft_round: 4,
+    draft_pick: 95,
     draft_year: 2015,
-    player_id: 6756,
-    profile_url:
+    league_id: 6756,
+    statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6756&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    games_url:
+    game_statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6756&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    // profile_url: 'http://liiga.fi/pelaajat/100025980/lindgren-jesper',
-    // games_url: 'http://liiga.fi/fi/pelaajat/100025980/lindgren-jesper/ottelu-ottelulta',
+    // statline_url: 'http://liiga.fi/pelaajat/100025980/lindgren-jesper',
+    // game_statline_url: 'http://liiga.fi/fi/pelaajat/100025980/lindgren-jesper/ottelu-ottelulta',
     league: "AHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=187806"
+    ep_url: "http://www.eliteprospects.com/player.php?player=187806",
   },
   {
     first_name: "Rasmus",
@@ -207,16 +207,16 @@ module.exports.prospects = [
     position: "D",
     shoots: "L",
     dob: "2000-03-07",
-    round: 1,
-    pick: 29,
+    draft_round: 1,
+    draft_pick: 29,
     draft_year: 2018,
-    player_id: 7314,
-    profile_url:
+    league_id: 7314,
+    statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7314&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    games_url:
+    game_statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7314&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
     league: "AHL",
-    ep_url: "https://www.eliteprospects.com/player/289453/rasmus-sandin"
+    ep_url: "https://www.eliteprospects.com/player/289453/rasmus-sandin",
   },
   {
     first_name: "Semyon",
@@ -224,17 +224,17 @@ module.exports.prospects = [
     position: "C",
     shoots: "R",
     dob: "2000-09-15",
-    round: 3,
-    pick: 76,
+    draft_round: 3,
+    draft_pick: 76,
     draft_year: 2018,
-    player_id: 7484,
-    profile_url:
+    league_id: 7484,
+    statline_url:
       "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=2976319eb44abe94&fmt=json&client_code=ohl&lang=en&player_id=7484&category=seasonstats",
-    games_url:
+    game_statline_url:
       "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=2976319eb44abe94&fmt=json&client_code=ohl&lang=en&player_id=7484&category=gamebygame",
     league: "OHL",
     ep_url:
-      "https://www.eliteprospects.com/player/315260/semyon-der-arguchintsev"
+      "https://www.eliteprospects.com/player/315260/semyon-der-arguchintsev",
   },
   {
     first_name: "Riley",
@@ -242,16 +242,16 @@ module.exports.prospects = [
     position: "C",
     shoots: "L",
     dob: "2000-01-05",
-    round: 3,
-    pick: 83,
+    draft_round: 3,
+    draft_pick: 83,
     draft_year: 2018,
-    player_id: 27355,
-    profile_url:
+    league_id: 27355,
+    statline_url:
       "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=41b145a848f4bd67&fmt=json&client_code=whl&lang=en&player_id=27355&category=seasonstats",
-    games_url:
+    game_statline_url:
       "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=41b145a848f4bd67&fmt=json&client_code=whl&lang=en&player_id=27355&category=gamebygame",
     league: "WHL",
-    ep_url: "https://www.eliteprospects.com/player/201715/riley-stotts"
+    ep_url: "https://www.eliteprospects.com/player/201715/riley-stotts",
   },
   {
     first_name: "Mac",
@@ -259,17 +259,17 @@ module.exports.prospects = [
     position: "D",
     shoots: "R",
     dob: "1998-09-26",
-    round: 4,
-    pick: 118,
+    draft_round: 4,
+    draft_pick: 118,
     draft_year: 2018,
-    player_id: "c8ff052d590070ffd158a1c4",
-    profile_url:
+    league_id: "c8ff052d590070ffd158a1c4",
+    statline_url:
       "https://www.echl.com/api/s3?q=player-b7ea99e8a16f1597fada3b6d.json",
-    games_url: "",
-    // profile_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7303&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
-    // games_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7303&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
+    game_statline_url: "",
+    // statline_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7303&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
+    // game_statline_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7303&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
     league: "ECHL",
-    ep_url: "https://www.eliteprospects.com/player/267652/mac-hollowell"
+    ep_url: "https://www.eliteprospects.com/player/267652/mac-hollowell",
   },
   {
     first_name: "Filip",
@@ -277,16 +277,16 @@ module.exports.prospects = [
     position: "D",
     shoots: "L",
     dob: "1999-10-20",
-    round: 5,
-    pick: 149,
+    draft_round: 5,
+    draft_pick: 149,
     draft_year: 2018,
-    player_id: 27960,
-    profile_url:
+    league_id: 27960,
+    statline_url:
       "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=41b145a848f4bd67&fmt=json&client_code=whl&lang=en&player_id=27960&category=seasonstats",
-    games_url:
+    game_statline_url:
       "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=41b145a848f4bd67&fmt=json&client_code=whl&lang=en&player_id=27960&category=gamebygame",
     league: "WHL",
-    ep_url: "https://www.eliteprospects.com/player/247241/filip-kral"
+    ep_url: "https://www.eliteprospects.com/player/247241/filip-kral",
   },
   {
     first_name: "Pontus",
@@ -294,16 +294,16 @@ module.exports.prospects = [
     position: "LW",
     shoots: "L",
     dob: "1999-03-09",
-    round: 6,
-    pick: 156,
+    draft_round: 6,
+    draft_pick: 156,
     draft_year: 2018,
-    player_id: 0,
-    profile_url:
+    league_id: 0,
+    statline_url:
       "https://www.shl.se/lag/fe02-fe02mf1FN__vaxjo-lakers/qTK-4a8Y9mMrn__pontus-holmberg/statistics",
-    games_url:
+    game_statline_url:
       "https://www.shl.se/lag/fe02-fe02mf1FN__vaxjo-lakers/qTK-4a8Y9mMrn__pontus-holmberg/gamelog",
     league: "SHL",
-    ep_url: "https://www.eliteprospects.com/player/265859/pontus-holmberg"
+    ep_url: "https://www.eliteprospects.com/player/265859/pontus-holmberg",
   },
   {
     first_name: "Semyon",
@@ -311,14 +311,14 @@ module.exports.prospects = [
     position: "LW",
     shoots: "L",
     dob: "2000-01-19",
-    round: 7,
-    pick: 211,
+    draft_round: 7,
+    draft_pick: 211,
     draft_year: 2018,
-    player_id: 25697,
-    profile_url: "http://www.vhlru.ru/en/players/25697/",
-    games_url: "http://www.vhlru.ru/en/players/25697/games/",
+    league_id: 25697,
+    statline_url: "http://www.vhlru.ru/en/players/25697/",
+    game_statline_url: "http://www.vhlru.ru/en/players/25697/games/",
     league: "VHL",
-    ep_url: "https://www.eliteprospects.com/player/420947/semyon-kizimov"
+    ep_url: "https://www.eliteprospects.com/player/420947/semyon-kizimov",
   },
   {
     first_name: "Joseph",
@@ -326,17 +326,17 @@ module.exports.prospects = [
     position: "D",
     shoots: "R",
     dob: "1997-07-22",
-    round: null,
-    pick: null,
+    draft_round: null,
+    draft_pick: null,
     draft_year: null,
-    player_id: 7517,
-    profile_url:
+    league_id: 7517,
+    statline_url:
       "https://www.echl.com/api/s3?q=player-a7a81ba19f324b9a59b9c0ea.json",
-    games_url: "",
-    // profile_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7517&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
-    // games_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7517&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
+    game_statline_url: "",
+    // statline_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7517&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
+    // game_statline_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7517&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
     league: "ECHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=262071"
+    ep_url: "http://www.eliteprospects.com/player.php?player=262071",
   },
   {
     first_name: "Colton",
@@ -344,17 +344,17 @@ module.exports.prospects = [
     position: "C",
     shoots: "R",
     dob: "1997-04-27",
-    round: null,
-    pick: null,
+    draft_round: null,
+    draft_pick: null,
     draft_year: null,
-    player_id: 7544,
-    profile_url:
+    league_id: 7544,
+    statline_url:
       "https://www.echl.com/api/s3?q=player-c8ff052d590070ffd158a1c4.json",
-    games_url: "",
-    // profile_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7544&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
-    // games_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7544&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
+    game_statline_url: "",
+    // statline_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7544&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
+    // game_statline_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7544&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
     league: "ECHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=199895"
+    ep_url: "http://www.eliteprospects.com/player.php?player=199895",
   },
   {
     first_name: "Justin",
@@ -362,17 +362,17 @@ module.exports.prospects = [
     position: "RW",
     shoots: "R",
     dob: "1998-02-02",
-    round: null,
-    pick: null,
+    draft_round: null,
+    draft_pick: null,
     draft_year: null,
-    player_id: 7989,
-    profile_url:
+    league_id: 7989,
+    statline_url:
       "https://www.echl.com/api/s3?q=player-5ae4e4e2e12fbdac1ee2e381.json",
-    games_url: "",
-    // profile_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7989&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
-    // games_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7989&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
+    game_statline_url: "",
+    // statline_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7989&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
+    // game_statline_url: 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7989&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json',
     league: "ECHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=217051"
+    ep_url: "http://www.eliteprospects.com/player.php?player=217051",
   },
   {
     first_name: "Nick",
@@ -380,16 +380,16 @@ module.exports.prospects = [
     position: "LW",
     shoots: "L",
     dob: "2001-09-11",
-    round: 2,
-    pick: 53,
+    draft_round: 2,
+    draft_pick: 53,
     draft_year: 2019,
-    player_id: 7662,
-    profile_url:
+    league_id: 7662,
+    statline_url:
       "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=2976319eb44abe94&fmt=json&client_code=ohl&lang=en&player_id=7662&category=seasonstats",
-    games_url:
+    game_statline_url:
       "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=2976319eb44abe94&fmt=json&client_code=ohl&lang=en&player_id=7662&category=gamebygame",
     league: "OHL",
-    ep_url: "https://www.eliteprospects.com/player/359539/nicholas-robertson"
+    ep_url: "https://www.eliteprospects.com/player/359539/nicholas-robertson",
   },
   {
     first_name: "Mikko",
@@ -397,18 +397,18 @@ module.exports.prospects = [
     position: "D",
     shoots: "L",
     dob: "2001-01-18",
-    round: 3,
-    pick: 84,
+    draft_round: 3,
+    draft_pick: 84,
     draft_year: 2019,
-    player_id: 31128854,
+    league_id: 31128854,
     // Liiga Links
-    // profile_url: 'https://liiga.fi/fi/pelaajat/31128854/kokkonen-mikko',
-    // games_url: 'https://liiga.fi/fi/pelaajat/31128854/kokkonen-mikko/ottelu-ottelulta',
-    profile_url: "https://liiga.fi/fi/pelaajat/31128854/kokkonen-mikko",
-    games_url:
+    // statline_url: 'https://liiga.fi/fi/pelaajat/31128854/kokkonen-mikko',
+    // game_statline_url: 'https://liiga.fi/fi/pelaajat/31128854/kokkonen-mikko/ottelu-ottelulta',
+    statline_url: "https://liiga.fi/fi/pelaajat/31128854/kokkonen-mikko",
+    game_statline_url:
       "https://liiga.fi/fi/pelaajat/31128854/kokkonen-mikko/ottelu-ottelulta",
     league: "Liiga",
-    ep_url: "https://www.eliteprospects.com/player/347571/mikko-kokkonen"
+    ep_url: "https://www.eliteprospects.com/player/347571/mikko-kokkonen",
   },
   {
     first_name: "Mikhail",
@@ -416,15 +416,15 @@ module.exports.prospects = [
     position: "C",
     shoots: "L",
     dob: "2001-03-26",
-    round: 4,
-    pick: 115,
+    draft_round: 4,
+    draft_pick: 115,
     draft_year: 2019,
-    player_id: 7662,
-    profile_url:
+    league_id: 7662,
+    statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=widgetkit2&key=f322673b6bcae299&p=1&client_code=lhjmq&view=Teamstat&fmt=json&player_id=17871&lang=en&force_player=0&callback=json",
-    games_url: `https://lscluster.hockeytech.com/feed/index.php?feed=widgetkit2&key=f322673b6bcae299&client_code=lhjmq&view=Gamebygame&lang=en&season_id=${qmjhl_season_id}&fmt=json&dfdsfdsa=2fdsa&player_id=17871&force_player=0&callback=json`,
+    game_statline_url: `https://lscluster.hockeytech.com/feed/index.php?feed=widgetkit2&key=f322673b6bcae299&client_code=lhjmq&view=Gamebygame&lang=en&season_id=${qmjhl_season_id}&fmt=json&dfdsfdsa=2fdsa&player_id=17871&force_player=0&callback=json`,
     league: "QMJHL",
-    ep_url: "https://www.eliteprospects.com/player/514653/mikhail-abramov"
+    ep_url: "https://www.eliteprospects.com/player/514653/mikhail-abramov",
   },
   {
     first_name: "Nick",
@@ -432,14 +432,14 @@ module.exports.prospects = [
     position: "C",
     shoots: "L",
     dob: "1999-06-04",
-    round: 4,
-    pick: 124,
+    draft_round: 4,
+    draft_pick: 124,
     draft_year: 2019,
-    player_id: 7631,
-    profile_url: "http://collegehockeyinc.com/stats/players20.php?harm22",
-    games_url: "http://collegehockeyinc.com/stats/players20.php?harm22",
+    league_id: 7631,
+    statline_url: "http://collegehockeyinc.com/stats/players20.php?harm22",
+    game_statline_url: "http://collegehockeyinc.com/stats/players20.php?harm22",
     league: "NCAA",
-    ep_url: "https://www.eliteprospects.com/player/201476/nick-abruzzese"
+    ep_url: "https://www.eliteprospects.com/player/201476/nick-abruzzese",
   },
   {
     first_name: "Mike",
@@ -447,16 +447,16 @@ module.exports.prospects = [
     position: "D",
     shoots: "L",
     dob: "2001-04-13",
-    round: 5,
-    pick: 146,
+    draft_round: 5,
+    draft_pick: 146,
     draft_year: 2019,
-    player_id: 7842,
-    profile_url:
+    league_id: 7842,
+    statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7842&site_id=0&key=e828f89b243dc43f&client_code=ushl&league_id=&lang=en&statsType=standard&callback=json",
-    games_url:
+    game_statline_url:
       "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7842&site_id=0&key=e828f89b243dc43f&client_code=ushl&league_id=&lang=en&statsType=standard&callback=json",
     league: "USHL",
-    ep_url: "https://www.eliteprospects.com/player/427432/mike-koster"
+    ep_url: "https://www.eliteprospects.com/player/427432/mike-koster",
   },
   {
     first_name: "Kalle",
@@ -464,15 +464,15 @@ module.exports.prospects = [
     position: "D",
     shoots: "R",
     dob: "2001-03-13",
-    round: 7,
-    pick: 204,
+    draft_round: 7,
+    draft_pick: 204,
     draft_year: 2019,
-    player_id: 8294,
-    profile_url:
+    league_id: 8294,
+    statline_url:
       "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=2976319eb44abe94&fmt=json&client_code=ohl&lang=en&player_id=8294&category=seasonstats",
-    games_url:
+    game_statline_url:
       "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=2976319eb44abe94&fmt=json&client_code=ohl&lang=en&player_id=8294&category=gamebygame",
     league: "OHL",
-    ep_url: "https://www.eliteprospects.com/player/395424/kalle-loponen"
+    ep_url: "https://www.eliteprospects.com/player/395424/kalle-loponen",
   },
 ];

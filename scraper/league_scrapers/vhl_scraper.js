@@ -30,26 +30,34 @@ module.exports = {
       rowNumber += 2;
     }
 
+    // If the player has a summary row then alter the default column number so correct stats are plucked
+    const columnNumber =
+      season(`.player_stats > tbody > tr:nth-last-of-type(${rowNumber})`)
+        .children("td:nth-child(1)")
+        .text() === "Summary:"
+        ? 3
+        : 4;
+
     goals = season(`.player_stats > tbody > tr:nth-last-of-type(${rowNumber})`)
-      .children("td:nth-child(3)")
+      .children(`td:nth-child(${columnNumber})`)
       .text();
     assists = season(
       `.player_stats > tbody > tr:nth-last-of-type(${rowNumber})`
     )
-      .children("td:nth-child(4)")
+      .children(`td:nth-child(${columnNumber + 1})`)
       .text();
     points = season(`.player_stats > tbody > tr:nth-last-of-type(${rowNumber})`)
-      .children("td:nth-child(5)")
+      .children(`td:nth-child(${columnNumber + 2})`)
       .text();
     shots = season(`.player_stats > tbody > tr:nth-last-of-type(${rowNumber})`)
-      .children("td:nth-child(14)")
+      .children(`td:nth-child(${columnNumber + 11})`)
       .text();
     games_played = season(
       `.player_stats > tbody > tr:nth-last-of-type(${rowNumber})`
     )
-      .children("td:nth-child(2)")
+      .children(`td:nth-child(${columnNumber - 1})`)
       .text();
 
     return [goals, assists, points, shots, games_played];
-  }
+  },
 };
