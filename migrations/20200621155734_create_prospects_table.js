@@ -24,7 +24,7 @@ exports.up = function (knex) {
     table.decimal("assists_pg");
     table.decimal("points_pg");
     table.decimal("shots_pg");
-    table.timestamps();
+    table.timestamps(false, true);
   });
 };
 

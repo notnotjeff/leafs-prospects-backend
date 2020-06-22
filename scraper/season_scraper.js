@@ -152,9 +152,11 @@ module.exports = async (prospects = []) => {
           last_name: prospect.last_name,
         });
         const rateStats = parseRates(countingStats);
+        const age = generalHelpers.getAge(prospect.dob);
 
         return {
           ...prospect,
+          age,
           ...countingStats,
           ...rateStats,
         };
