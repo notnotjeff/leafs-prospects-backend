@@ -15,23 +15,24 @@ admin.initializeApp({
   credential: admin.credential.cert({
     private_key: process.env.FIREBASE_KEY.replace(/\\n/g, "\n"),
     client_email: process.env.FIREBASE_EMAIL,
-    project_id: "leafs-prospects"
+    project_id: "leafs-prospects",
   }),
-  databaseURL: "https://leafs-prospects.firebaseio.com"
+  databaseURL: "https://leafs-prospects.firebaseio.com",
 });
 
 // Get And Set Backend Prospect Array
 const { prospects } = backend;
 
 // Select a specific player, must also turn on TESTING_MODE
-const testingProspect = 'Koster';
-
+const testingProspect = "Koster";
 
 // eslint-disable-next-line no-shadow
 async function scrape_games(prospects) {
   const todaysGames = [];
   const yesterdaysGames = [];
-  const filteredProspects = TESTING_MODE ? prospects.filter(player => player.last_name === testingProspect) : prospects;
+  const filteredProspects = TESTING_MODE
+    ? prospects.filter((player) => player.last_name === testingProspect)
+    : prospects;
 
   const { day, month, year, yDay, yMonth, yYear } = dateHelpers.setDateValues();
 
@@ -46,14 +47,14 @@ async function scrape_games(prospects) {
     ) {
       urlData = {
         url: prospect.games_url,
-        json: true
+        json: true,
       };
     } else if (prospect.league === "ECHL" || prospect.league === "NLA") {
       continue;
     } else {
       urlData = {
         url: prospect.games_url,
-        transform: body => cheerio.load(body)
+        transform: (body) => cheerio.load(body),
       };
     }
 
@@ -95,7 +96,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -121,7 +122,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${yYear}-${yMonth}-${yDay}`
+            gameDate: `${yYear}-${yMonth}-${yDay}`,
           });
         }
 
@@ -153,7 +154,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${yYear}-${yMonth}-${yDay}`
+            gameDate: `${yYear}-${yMonth}-${yDay}`,
           });
         }
       } else if (prospect.league === "QMJHL") {
@@ -205,7 +206,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -239,25 +240,29 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${yYear}-${yMonth}-${yDay}`
+            gameDate: `${yYear}-${yMonth}-${yDay}`,
           });
         }
       } else if (prospect.league === "USHL") {
         const parsedData = JSON.parse(
           scrapedProspect.substr(5, scrapedProspect.length - 6)
         );
-        const parsedGames = parsedData.gameByGame[0].sections[0].data
+        const parsedGames = parsedData.gameByGame[0].sections[0].data;
 
         const todaysGameUSHL = parsedGames.filter(
-          ({ row: { date_played } }) => date_played === `${year}-${month}-${day}`
+          ({ row: { date_played } }) =>
+            date_played === `${year}-${month}-${day}`
         );
         const yesterdaysGameUSHL = parsedGames.filter(
-          ({ row: { date_played } }) => date_played === `${yYear}-${yMonth}-${yDay}`
+          ({ row: { date_played } }) =>
+            date_played === `${yYear}-${yMonth}-${yDay}`
         );
 
         if (todaysGameUSHL.length > 0) {
           const goals =
-            todaysGameUSHL[0].row.goals === "-" ? 0 : +todaysGameUSHL[0].row.goals;
+            todaysGameUSHL[0].row.goals === "-"
+              ? 0
+              : +todaysGameUSHL[0].row.goals;
           const assists =
             todaysGameUSHL[0].row.assists === "-"
               ? 0
@@ -267,7 +272,9 @@ async function scrape_games(prospects) {
               ? 0
               : +todaysGameUSHL[0].row.points;
           const shots =
-            todaysGameUSHL[0].row.shots === "-" ? 0 : +todaysGameUSHL[0].row.shots;
+            todaysGameUSHL[0].row.shots === "-"
+              ? 0
+              : +todaysGameUSHL[0].row.shots;
           const penaltyMinutes =
             todaysGameUSHL[0].row.penalty_minutes === "-"
               ? 0
@@ -281,7 +288,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -315,7 +322,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${yYear}-${yMonth}-${yDay}`
+            gameDate: `${yYear}-${yMonth}-${yDay}`,
           });
         }
       } else if (prospect.league === "AHL") {
@@ -345,7 +352,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -364,7 +371,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${yYear}-${yMonth}-${yDay}`
+            gameDate: `${yYear}-${yMonth}-${yDay}`,
           });
         }
 
@@ -389,7 +396,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${yYear}-${yMonth}-${yDay}`
+            gameDate: `${yYear}-${yMonth}-${yDay}`,
           });
         }
       } else if (prospect.league === "KHL") {
@@ -439,7 +446,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -468,7 +475,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -497,7 +504,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
       } else if (prospect.league === "Liiga") {
@@ -567,7 +574,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -596,7 +603,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -625,7 +632,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
       } else if (prospect.league === "SHL") {
@@ -669,7 +676,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -703,7 +710,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -742,7 +749,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
       } else if (prospect.league === "VHL") {
@@ -792,7 +799,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -821,7 +828,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -850,7 +857,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
       } else if (prospect.league === "NCAA") {
@@ -905,7 +912,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -930,7 +937,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
 
@@ -955,7 +962,7 @@ async function scrape_games(prospects) {
             points,
             shots,
             penaltyMinutes,
-            gameDate: `${year}-${month}-${day}`
+            gameDate: `${year}-${month}-${day}`,
           });
         }
       }
