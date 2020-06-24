@@ -10,8 +10,9 @@
   "scripts": {
     "test": "jest --watch",
     "test:no-watch": "jest",
-    "start": "node NODE_ENV=production server",
+    "start": "nodemon server",
     "start:dev": "nodemon server",
+    "start:prod": "NODE_ENV=production node server",
     "lint": "eslint --ignore-path ../.gitignore .",
     "prettier": "prettier --ignore-path ../.gitignore \"**/*.+(js|json)\"",
     "format": "npm run prettier -- --write",
