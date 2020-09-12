@@ -70,40 +70,6 @@ module.exports = [
     ep_url: "http://www.eliteprospects.com/player.php?player=197800",
   },
   {
-    first_name: "Adam",
-    last_name: "Brooks",
-    position: "C",
-    shoots: "L",
-    dob: "1996-05-06",
-    draft_round: 4,
-    draft_pick: 92,
-    draft_year: 2016,
-    league_id: 6888,
-    statline_url:
-      "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6888&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    game_statline_url:
-      "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6888&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    league: "AHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=120202",
-  },
-  {
-    first_name: "Yegor",
-    last_name: "Korshkov",
-    position: "RW",
-    shoots: "L",
-    dob: "1996-07-10",
-    draft_round: 2,
-    draft_pick: 31,
-    draft_year: 2016,
-    league_id: 7668,
-    statline_url:
-      "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7668&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    game_statline_url:
-      "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=7668&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    league: "AHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=176637",
-  },
-  {
     first_name: "Vladislav",
     last_name: "Kara",
     position: "C",
@@ -183,25 +149,6 @@ module.exports = [
     ep_url: "http://www.eliteprospects.com/player.php?player=226438",
   },
   {
-    first_name: "Jesper",
-    last_name: "Lindgren",
-    position: "D",
-    shoots: "R",
-    dob: "1997-05-19",
-    draft_round: 4,
-    draft_pick: 95,
-    draft_year: 2015,
-    league_id: 6756,
-    statline_url:
-      "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6756&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    game_statline_url:
-      "https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=player&player_id=6756&site_id=1&key=50c2cd9b5e18e390&client_code=ahl&league_id=&lang=en&statsType=standard&callback=json",
-    // statline_url: 'http://liiga.fi/pelaajat/100025980/lindgren-jesper',
-    // game_statline_url: 'http://liiga.fi/fi/pelaajat/100025980/lindgren-jesper/ottelu-ottelulta',
-    league: "AHL",
-    ep_url: "http://www.eliteprospects.com/player.php?player=187806",
-  },
-  {
     first_name: "Rasmus",
     last_name: "Sandin",
     position: "D",
@@ -235,23 +182,6 @@ module.exports = [
     league: "OHL",
     ep_url:
       "https://www.eliteprospects.com/player/315260/semyon-der-arguchintsev",
-  },
-  {
-    first_name: "Riley",
-    last_name: "Stotts",
-    position: "C",
-    shoots: "L",
-    dob: "2000-01-05",
-    draft_round: 3,
-    draft_pick: 83,
-    draft_year: 2018,
-    league_id: 27355,
-    statline_url:
-      "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=41b145a848f4bd67&fmt=json&client_code=whl&lang=en&player_id=27355&category=seasonstats",
-    game_statline_url:
-      "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=41b145a848f4bd67&fmt=json&client_code=whl&lang=en&player_id=27355&category=gamebygame",
-    league: "WHL",
-    ep_url: "https://www.eliteprospects.com/player/201715/riley-stotts",
   },
   {
     first_name: "Mac",
@@ -474,5 +404,22 @@ module.exports = [
       "http://lscluster.hockeytech.com/feed/?feed=modulekit&view=player&key=2976319eb44abe94&fmt=json&client_code=ohl&lang=en&player_id=8294&category=gamebygame",
     league: "OHL",
     ep_url: "https://www.eliteprospects.com/player/395424/kalle-loponen",
+  },
+  {
+    first_name: "Filip",
+    last_name: "Hallander",
+    position: "C",
+    shoots: "L",
+    dob: "2000-06-29",
+    draft_round: 2,
+    draft_pick: 58,
+    draft_year: 2018,
+    league_id: 0,
+    statline_url:
+      "https://www.shl.se/lag/1a71-1a71gTHKh__lulea-hockey/qRm-1ykhbTRK4__filip-hallander/statistics",
+    game_statline_url:
+      "https://www.shl.se/lag/1a71-1a71gTHKh__lulea-hockey/qRm-1ykhbTRK4__filip-hallander/gamelog",
+    league: "SHL",
+    ep_url: "https://www.eliteprospects.com/player/293387/filip-hallander",
   },
 ];
