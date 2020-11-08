@@ -4,7 +4,8 @@ exports.up = function (knex) {
     table.string("first_name", 255).notNullable();
     table.string("last_name", 255).notNullable();
     table.string("league", 255).notNullable();
-    table.date("date");
+    table.string("date", 255).notNullable();
+    table.datetime("date_time");
     table.integer("goals");
     table.integer("assists");
     table.integer("points");
