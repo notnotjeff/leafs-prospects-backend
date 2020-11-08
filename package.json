@@ -19,6 +19,7 @@
     "db:drop": "knex migrate:rollback --all",
     "db:migrate": "knex migrate:latest",
     "db:seed": "knex seed:run",
+    "db:recreate": "npm run db:drop && npm run db:migrate",
     "db:reset": "npm run db:drop && npm run db:migrate && npm run db:seed"
   },
   "dependencies": {
