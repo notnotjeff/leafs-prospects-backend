@@ -5,7 +5,7 @@ exports.up = function (knex) {
     table.string("last_name", 255).notNullable();
     table.string("league", 255).notNullable();
     table.string("ep_url", 255).notNullable();
-    table.string("statline_url", 255).notNullable();
+    table.string("statline_url", 255);
     table.string("game_statline_url", 255);
     table.string("league_id", 255);
     table.string("position", 255).notNullable();
