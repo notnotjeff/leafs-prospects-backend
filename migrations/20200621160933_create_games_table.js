@@ -9,7 +9,7 @@ exports.up = function (knex) {
     table.integer("assists");
     table.integer("points");
     table.integer("shots");
-    table.decimal("penalty_minutes");
+    table.integer("penalty_minutes");
     table.timestamps(false, true);
   });
 };
