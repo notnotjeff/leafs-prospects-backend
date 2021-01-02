@@ -9,6 +9,7 @@ exports.up = function (knex) {
     table.string("game_statline_url", 255);
     table.string("league_id", 255);
     table.string("team_id", 255);
+    table.string("season_id", 255);
     table.string("position", 255).notNullable();
     table.string("shoots", 255).notNullable();
     table.string("dob", 255).notNullable();
