@@ -29,7 +29,7 @@ app.get("*", (req, res) => {
   res.send("404 Not Found");
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5050;
 app.listen(port);
 // eslint-disable-next-line no-console
 console.log(`Server listening on port ${port}`);
